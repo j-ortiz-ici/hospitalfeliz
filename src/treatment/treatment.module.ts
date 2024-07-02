@@ -1,15 +1,19 @@
+// src/treatment/treatment.module.ts
+
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { TreatmentService } from './treatment.service';
-import { TreatmentController } from './treatment.controller';
 import { Treatment } from './treatment.entity';
+import { TreatmentService } from './treatment.service';
 import { Patient } from '../patient/patient.entity';
 import { Medic } from '../medic/medic.entity';
+import { PatientHistory } from '../patient-history/patient-history.entity'; // Import PatientHistory entity
+import { TreatmentController } from './treatment.controller';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Treatment, Patient, Medic])],
+  imports: [
+    TypeOrmModule.forFeature([Treatment, Patient, Medic, PatientHistory]), // Ensure PatientHistory is included here
+  ],
   providers: [TreatmentService],
   controllers: [TreatmentController],
-  exports: [TypeOrmModule],
 })
 export class TreatmentModule {}

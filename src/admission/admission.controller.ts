@@ -14,7 +14,7 @@ import { CreateAdmissionDto } from './dto/create-admission.dto';
 import { Admission } from './admission.entity';
 import { ApiTags } from '@nestjs/swagger';
 
-@ApiTags('Admissions')
+@ApiTags('Admisiones')
 @Controller('admissions')
 export class AdmissionController {
   constructor(private readonly admissionService: AdmissionService) {}

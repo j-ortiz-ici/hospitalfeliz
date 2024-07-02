@@ -13,7 +13,7 @@ import { CreateTreatmentDto } from './dto/create-treatment.dto';
 import { UpdateTreatmentDto } from './dto/update-treatment.dto';
 import { ApiTags } from '@nestjs/swagger';
 
-@ApiTags('Treatments')
+@ApiTags('Tratamientos')
 @Controller('treatments')
 export class TreatmentController {
   constructor(private readonly treatmentService: TreatmentService) {}

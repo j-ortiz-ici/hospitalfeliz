@@ -13,7 +13,7 @@ import { CreateMedicDto } from './dto/create-medic.dto';
 import { UpdateMedicDto } from './dto/update-medic.dto';
 import { ApiTags } from '@nestjs/swagger';
 
-@ApiTags('Medics')
+@ApiTags('Medicos')
 @Controller('medics')
 export class MedicController {
   constructor(private readonly medicService: MedicService) {}

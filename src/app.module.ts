@@ -3,8 +3,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { PatientModule } from './patient/patient.module';
 import { TreatmentModule } from './treatment/treatment.module';
 import { MedicModule } from './medic/medic.module';
-import { ReceptionModule } from './reception/reception.module';
 import { AdmissionModule } from './admission/admission.module';
+import { ExaminationModule } from './examination/examination.module';
+import { PatientHistoryModule } from './patient-history/patient-history.module';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -20,8 +21,9 @@ import { AdmissionModule } from './admission/admission.module';
     PatientModule,
     TreatmentModule,
     MedicModule,
-    ReceptionModule,
     AdmissionModule,
+    ExaminationModule,
+    PatientHistoryModule,
   ],
   controllers: [],
   providers: [],
