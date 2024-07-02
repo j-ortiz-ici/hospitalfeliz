@@ -12,7 +12,9 @@ import {
 import { PatientHistoryService } from './patient-history.service';
 import { CreatePatientHistoryDto } from './dto/create-patient-history.dto';
 import { PatientHistory } from './patient-history.entity';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Historial del Paciente')
 @Controller('patient-history')
 export class PatientHistoryController {
   constructor(private readonly patientHistoryService: PatientHistoryService) {}
